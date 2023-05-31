@@ -1,3 +1,6 @@
+chrome.browserAction.onClicked.addListener(function (tab) {
+  chrome.tabs.sendMessage(tab.id, { action: "inject" });
+});
 // This is a placeholder for a background script.
 // Uncomment sections below to use them.
 
