@@ -16,9 +16,9 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.action === "inject") {
     // Create and inject the iframe
     let iframe = document.createElement('iframe');
-    iframe.src = chrome.runtime.getURL('panel.html');
+    iframe.src = chrome.runtime.getURL('popup.html');
     iframe.style.position = 'fixed';
-    iframe.style.top = '10px';
+    iframe.style.bottom = '10px';
     iframe.style.right = '10px';
     iframe.style.width = '400px';
     iframe.style.height = '600px';
